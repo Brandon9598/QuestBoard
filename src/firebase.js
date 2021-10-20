@@ -16,7 +16,7 @@ const firebaseConfig = {
   storageBucket: "questboard-b978c.appspot.com",
   messagingSenderId: "393232043021",
   appId: "1:393232043021:web:7dec3826c1dc3a4fbd5944",
-  measurementId: "G-VJDGG1H42L"
+  measurementId: "G-VJDGG1H42L",
 };
 
 // Initialize Firebase
@@ -26,8 +26,8 @@ if (firebase.apps.length > 0) {
 } else {
   app = firebase.initializeApp(firebaseConfig);
 }
-const auth = app.auth();
-const db = app.firestore();
+export const auth = app.auth();
+export const db = app.firestore();
 
 // Authentication
 const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -54,6 +54,6 @@ export const signInWithGoogle = async () => {
   }
 };
 
-const logout = () => {
+export const logout = () => {
   auth.signOut();
 };
