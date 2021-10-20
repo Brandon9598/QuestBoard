@@ -14,7 +14,7 @@ function NavbarDefault() {
 
                     <Nav>
                         <Nav.Link>The Board</Nav.Link>
-                        <Nav.Link>Sign Up</Nav.Link>
+                        {/* TODO: Finish me as well. */}
                         <Button variant="light">Login</Button>
                     </Nav>
                 </Container>
