@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css";
-import NavbarDefault from '../Components/NavbarDefault';
+import QuestNavbar from '../Components/QuestNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { signInWithGoogle } from "../firebase";
 
@@ -9,7 +9,7 @@ function Home() {
     return (
     <div>
         
-        <NavbarDefault /> 
+        <QuestNavbar /> 
 
         <div className="bg-image">
             <div>
@@ -68,8 +68,7 @@ function Home() {
                                 <p class="card-text text-sm-left">
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sunt quasi voluptate ullam a dicta quidem repudiandae enim, quae, error, aliquid cupiditate pariatur libero! Dolores provident quas eos assumenda nostrum excepturi nobis sequi perspiciatis neque rem aliquid eveniet quibusdam dolor rerum repellendus, reiciendis, alias esse modi voluptas, mollitia suscipit consequatur!
                                 </p>
-                                {/* TODO: MAKE THIS WORK LIKE SIGNIN ABOVE */}
-                                <a href="#" class="btn btn-success">Create Account</a>
+                                <button onClick={signInWithGoogle} className="btn btn-success">Create Account</button>
                             </div>
                         </div>
                     </div>
