@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 import HomeView from './Pages/Home'
-import BoardView from './Pages/BoardView'
+import BoardListView from './Pages/BoardListView'
 
 const BaseRouter = () => {
     return (
         <div>
             <Route exact path = "/" component={HomeView}/>
-            <Route exact path = "/board" component={BoardView}/>
+            <Route exact path = "/board" component={BoardListView}/>
         </div>
     )
 }

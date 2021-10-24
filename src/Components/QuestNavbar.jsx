@@ -19,15 +19,15 @@ function QuestNavbar() {
                     <Nav>
                         {user ? (
                             <>
-                            <Nav.Link>Pending Quests</Nav.Link>
-                            <Nav.Link>The Board</Nav.Link>
+                            {/* <Nav.Link>Pending Quests</Nav.Link> */}
+                            <Nav.Link href="http://localhost:3000/board">The Board</Nav.Link>
                             <Nav.Link>My Account</Nav.Link>
                             <Button variant="light" onClick={logout}>Sign Out</Button>
                             </>
 
                         ) : (
                             <>
-                            <Nav.Link>The Board</Nav.Link>
+                            <Nav.Link href="http://localhost:3000/board">The Board</Nav.Link>
                             <Button variant="light" onClick={signInWithGoogle}>Login</Button>
                             </>
                         )}
