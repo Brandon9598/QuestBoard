@@ -1,14 +1,15 @@
 import './App.css';
 import BaseRouter from './routes';
+import CustomLayout from './Pages/Layout';
 import { BrowserRouter as Router, Switch} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
+        <CustomLayout>
           <BaseRouter />
-        </Switch>
+        </CustomLayout>
       </Router>
 
     </div>

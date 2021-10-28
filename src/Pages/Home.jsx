@@ -8,8 +8,6 @@ import { signInWithGoogle } from "../firebase";
 function Home() {
     return (
     <div>
-        
-        <QuestNavbar /> 
 
         <div className="bg-image">
             <div>
@@ -74,10 +72,6 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="p-5 bg-primary">
-            <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ut provident minus ullam aperiam, nemo, officiis quod repudiandae sunt repellat reiciendis deserunt impedit? Quis adipisci soluta illo ipsam explicabo perspiciatis.</p>
         </section>
 
         
