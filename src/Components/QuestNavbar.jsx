@@ -9,10 +9,10 @@ function QuestNavbar() {
     const [user, loading, error] = useAuthState(auth); //remembers user 
 
     return (
-        <div>            
+        <div className="quest.navbar">            
             <Navbar bg="primary" fixed="top" variant="dark" expand="md">
                 <Container>
-                    <Navbar.Brand>
+                    <Navbar.Brand href="http://localhost:3000">
                         QuestBoard
                     </Navbar.Brand>
 
