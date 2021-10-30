@@ -1,7 +1,7 @@
 import './App.css';
 import BaseRouter from './routes';
 import CustomLayout from './Pages/Layout';
-import { BrowserRouter as Router, Switch} from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 
 function App() {
   return (
