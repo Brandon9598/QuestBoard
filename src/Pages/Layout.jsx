@@ -1,17 +1,18 @@
 import React from 'react'
 import { Layout } from 'antd';
 import QuestNavbar from '../Components/QuestNavbar';
+import './Home.css'
 
 const { Header, Content, Footer } = Layout; 
 
 const CustomLayout = props => {
     return (
         <div>
-            <Layout className="layout">
+            <Layout>
                 <Header>
                     <QuestNavbar />
                 </Header>
-                <Content>
+                <Content className="layout-content">
                     {props.children}
                 </Content>
                 <Footer style={{ textAlign: "center" }}>

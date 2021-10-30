@@ -1,6 +1,5 @@
 import React from 'react';
 import "./Home.css";
-import QuestNavbar from '../Components/QuestNavbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { signInWithGoogle } from "../firebase";
 
@@ -11,8 +10,8 @@ function Home() {
 
         <div className="bg-image">
             <div>
-                <h1>QuestBoard</h1>
-                <h1>By HS Students, for HS Students</h1>
+                <h1 className="top-text">QuestBoard</h1>
+                <h1 className="top-text">By HS Students, for HS Students</h1>
             </div>
         </div>
 
@@ -21,13 +20,13 @@ function Home() {
                 <div class="d-flex">
                     <div>
                         <h3>What is <span class="text-primary">QuestBoard</span>?</h3>
-                            <p class="text-sm-left">
+                            <p className="text-sm-left">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque suscipit, accusantium nemo eum et nesciunt, consequuntur reprehenderit earum facere reiciendis non, quidem a beatae. Accusamus tenetur officiis fugit obcaecati?
                             </p>
                     </div>
                     <div>
                         <h3>Key Features</h3>
-                        <p class="text-sm-left">
+                        <p className="text-sm-left">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque suscipit, accusantium nemo eum et nesciunt, consequuntur reprehenderit earum facere reiciendis non, quidem a beatae. Accusamus tenetur officiis fugit obcaecati?
                         </p>
                     </div>
