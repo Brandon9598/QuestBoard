@@ -21,13 +21,15 @@ function Home() {
                     <div>
                         <h3>What is <span class="text-primary">QuestBoard</span>?</h3>
                             <p className="text-sm-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque suscipit, accusantium nemo eum et nesciunt, consequuntur reprehenderit earum facere reiciendis non, quidem a beatae. Accusamus tenetur officiis fugit obcaecati?
+                                QuestBoard is a website which gives high school students the freedom and ability to search for new opportunities to help bolster their experience before they graduate. Companies and various organizations can post their labor needs with ease, and students can sign on for them without having to go on an extensive search. With simply the click of a button, a student can sign on for a community service job, or even potentially sign on for a new part time job at a local restaraunt. These jobs are referred to as 'Quests', and can be found at the simple click of a button by navigating to 'The Board'. The possibilities are endless, and can save students valuable time that would otherwise be spent searching.
                             </p>
                     </div>
                     <div>
                         <h3>Key Features</h3>
                         <p className="text-sm-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi neque suscipit, accusantium nemo eum et nesciunt, consequuntur reprehenderit earum facere reiciendis non, quidem a beatae. Accusamus tenetur officiis fugit obcaecati?
+                            The Board - A place where students can easily access and sign up for a list of various Quests/opportunities, and organizations can post them.
+                            Simple UI - With a simple and easy to use User Interface, both organizations and students can connect with ease.
+                            Account Page - A detailed list of various important facts alongside other information that students and organizations can put up, as well as a compiled log of all jobs/Quests completed and an estimated total amount of hours spent at work.
                         </p>
                     </div>
                 </div>
@@ -47,7 +49,7 @@ function Home() {
                                     Organization
                                 </h3>
                                 <p class="card-text text-sm-left">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sunt quasi voluptate ullam a dicta quidem repudiandae enim, quae, error, aliquid cupiditate pariatur libero! Dolores provident quas eos assumenda nostrum excepturi nobis sequi perspiciatis neque rem aliquid eveniet quibusdam dolor rerum repellendus, reiciendis, alias esse modi voluptas, mollitia suscipit consequatur!
+                                    An Organization account has the ability to post jobs on The Board, but cannot accept any. In order to create an Organization account, you must actively be representing an official Organization/Company (Meals on wheels, Chick fil a, etc.) within Warner Robins (As of writing this).
                                 </p>
                                 <button onClick={signInWithGoogle} className="btn btn-success">Create Account</button>
                             </div>
@@ -63,7 +65,7 @@ function Home() {
                                     Student
                                 </h3>
                                 <p class="card-text text-sm-left">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sunt quasi voluptate ullam a dicta quidem repudiandae enim, quae, error, aliquid cupiditate pariatur libero! Dolores provident quas eos assumenda nostrum excepturi nobis sequi perspiciatis neque rem aliquid eveniet quibusdam dolor rerum repellendus, reiciendis, alias esse modi voluptas, mollitia suscipit consequatur!
+                                    Students are able to accept Quests and read keep track of their overall time spent working, but cannot post quests on The Board. So long as you attend High School within the Warner Robins area (as of writing this) and have permission from a parent/guardian, then you can create a Student Account.
                                 </p>
                                 <button onClick={signInWithGoogle} className="btn btn-success">Create Account</button>
                             </div>

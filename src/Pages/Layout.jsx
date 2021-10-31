@@ -17,7 +17,8 @@ const CustomLayout = props => {
                 </Content>
                 <Footer style={{ textAlign: "center" }}>
                     <section class="p-5 bg-primary">
-                        <p class="text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ut provident minus ullam aperiam, nemo, officiis quod repudiandae sunt repellat reiciendis deserunt impedit? Quis adipisci soluta illo ipsam explicabo perspiciatis.</p>
+                        <h3 class="text-light">Contact Info:</h3>
+                        <p class="text-light">ludafieno@gmail.com</p>
                     </section>
                 </Footer>
             </Layout>
