@@ -9,10 +9,10 @@ function QuestNavbar() {
     const [user, loading, error] = useAuthState(auth); //remembers user 
 
     return (
-        <div className="quest.navbar">            
+        <div>            
             <Navbar bg="primary" fixed="top" variant="dark" expand="md">
                 <Container>
-                    <Navbar.Brand href="http://localhost:3000">
+                    <Navbar.Brand href={`/`}>
                         QuestBoard
                     </Navbar.Brand>
 
@@ -20,14 +20,14 @@ function QuestNavbar() {
                         {user ? (
                             <>
                             {/* <Nav.Link>Pending Quests</Nav.Link> */}
-                            <Nav.Link href="http://localhost:3000/board">The Board</Nav.Link>
+                            <Nav.Link href={`/board`}>The Board</Nav.Link>
                             <Nav.Link>My Account</Nav.Link>
                             <Button variant="light" onClick={logout}>Sign Out</Button>
                             </>
 
                         ) : (
                             <>
-                            <Nav.Link href="http://localhost:3000/board">The Board</Nav.Link>
+                            <Nav.Link href={`/board`}>The Board</Nav.Link>
                             <Button variant="light" onClick={signInWithGoogle}>Login</Button>
                             </>
                         )}
