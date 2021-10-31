@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from "../firebase";
 import JobCard from '../Components/JobCard';
 import "./Home.css"
+import { Button } from 'react-bootstrap'
 
 function BoardListView() {
 
@@ -23,6 +24,10 @@ function BoardListView() {
   
     return (
         <div>
+          <div className="makeJob-button" >
+          <Button variant="success" size="lg" href={`/makejob`}>Create Quest!</Button>
+          </div>
+          
           <section className="p-5">
             <div className="container">
               <div className="row text-center"> 

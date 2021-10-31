@@ -128,3 +128,24 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.makeJob-button {
+  align-content: center;
+  padding-top: 1rem;
+  padding-bottom: 0;
+}
+
+.form-div {
+  padding: 2rem;
+  text-align: left;
+  width: 60rem;
+}
+
+.form-error {
+  color: red;
+}
+
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+}

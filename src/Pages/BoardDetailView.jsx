@@ -35,6 +35,7 @@ function BoardDetailView(props) {
                     <h3>Organization: {job.orgName ? job.orgName : "No Name Found"}</h3>
                     <h3> Location: {job.location ? job.location : "No Location Found"}</h3>
                     <h3> Time: {job.time ? job.time : "No Time Found"}</h3>
+                    <h3> Workers Needed: {job.workerAmount ? job.workerAmount : "Worker Amount Unspecified"}</h3>
                     <p>{job.description ? job.description : "No Description Found"}</p>
                     <h4>Contact Info: </h4>
                         <h4>{job.phone}</h4>
