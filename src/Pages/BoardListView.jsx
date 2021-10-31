@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { db } from "../firebase";
 import JobCard from '../Components/JobCard';
+import "./Home.css"
 
 function BoardListView() {
 
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
+    const newJobs = [];
     db.collection("jobs")
      .get()
      .then((querySnapshot) => {
-       const newJobs = [];
       querySnapshot.forEach((doc) => {
         //  console.log(doc.id, " => ", doc.data());
         newJobs.push(doc.data());
@@ -18,12 +19,13 @@ function BoardListView() {
       setJobs(newJobs); 
      });
    }, []);
+
   
     return (
         <div>
           <section className="p-5">
             <div className="container">
-              <div className="row text-cetner">
+              <div className="row text-center"> 
                   { jobs.map(job => <JobCard job={job}/>) }
               </div>
             </div>
