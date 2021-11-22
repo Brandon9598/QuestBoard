@@ -7,6 +7,7 @@ import "./Home.css";
 function BoardDetailView(props) {
 
     const boardID = props.match.params.boardID;
+    console.log(props);
     const [job, setJob] = useState([]);
 
 
@@ -18,12 +19,12 @@ function BoardDetailView(props) {
          .get()
          .then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
-            // console.log(doc.id, " => ", doc.data());
+            console.log(doc.id, " => ", doc.data());
             newJob = doc.data();
           });
          setJob(newJob); 
          });
-       }, []);
+       }, [boardID]);
 
     console.log(job);
 
@@ -40,7 +41,7 @@ function BoardDetailView(props) {
                     <h4>Contact Info: </h4>
                         <h4>{job.phone}</h4>
                         <h4>{job.email || job.phone ? job.email : "No Contact Info Found"}</h4>
-                    <img src={job.imageURL ? job.imageURL : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"} height='300px' />
+                    <img src={job.imageURL ? job.imageURL : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"} height='300px' alt=""/>
                 </Card>
             </div>
         </div>

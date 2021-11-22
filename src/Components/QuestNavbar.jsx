@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function QuestNavbar() {
-    const [user, loading, error] = useAuthState(auth); //remembers user 
+    const [user] = useAuthState(auth); //remembers user [loading, error] can also be used
 
     return (
         <div>            

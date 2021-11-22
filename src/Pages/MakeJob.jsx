@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import "./Home.css"
 import { useHistory } from "react-router-dom";
@@ -25,7 +25,8 @@ function MakeJob() {
 
     const createQuest = (event) => {
         event.preventDefault();
-        db.collection('jobs').add({
+        let newDocRef = db.collection('jobs').doc();
+        newDocRef.set({
             title: titleInput,
             orgName: orgNameInput,
             location: locationInput,
@@ -34,7 +35,8 @@ function MakeJob() {
             description: descInput,
             imageURL: imgURLInput,
             email: emailInput,
-            phone: phoneInput
+            phone: phoneInput,
+            uid: newDocRef.id
         }).then(() => {
             history.push(`/board`)
         })
@@ -82,7 +84,7 @@ function MakeJob() {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Quest Description</Form.Label>
-                    <Form.Control as="textarea" name="formQuestDesc" rows={3} placeholder="Write a description here!" placeholder={descInput} onChange={(e) => setDesc(e.target.value)} ref={register({required: "Description is required",})}/>
+                    <Form.Control as="textarea" name="formQuestDesc" rows={3} placeholder={descInput} onChange={(e) => setDesc(e.target.value)} ref={register({required: "Description is required",})}/>
                     {errors.formQuestDesc && <span className="form-error">{errors.formQuestDesc.message}</span>}
                 </Form.Group>
 
@@ -94,7 +96,7 @@ function MakeJob() {
                 
                 <Form.Group className="mb-3">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name="formQuestEmail" placeholder="name@example.com" placeholder={emailInput} onChange={(e) => setEmail(e.target.value)} ref={register({required: "Email is required",})}/>
+                    <Form.Control type="email" name="formQuestEmail" placeholder={emailInput} onChange={(e) => setEmail(e.target.value)} ref={register({required: "Email is required",})}/>
                     {errors.formQuestEmail && <span className="form-error">{errors.formQuestEmail.message}</span>}
                     <Form.Text className="text-muted">
                         Applicants for this quest will use this email to contact you.
@@ -103,7 +105,7 @@ function MakeJob() {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Phone number</Form.Label>
-                    <Form.Control type="phone" name="formQuestPhone" placeholder="(555)555-5555" placeholder={phoneInput} onChange={(e) => setPhone(e.target.value)} ref={register({required: "Phone number is required",})}/>
+                    <Form.Control type="phone" name="formQuestPhone" placeholder={phoneInput} onChange={(e) => setPhone(e.target.value)} ref={register({required: "Phone number is required",})}/>
                     {errors.formQuestPhone && <span className="form-error">{errors.formQuestPhone.message}</span>}
                     <Form.Text className="text-muted">
                         Applicants for this quest will use this phone number to contact you.
