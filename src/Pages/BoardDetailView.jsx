@@ -7,7 +7,7 @@ import "./Home.css";
 function BoardDetailView(props) {
 
     const boardID = props.match.params.boardID;
-    console.log(props);
+    console.log("props => ", props);
     const [job, setJob] = useState([]);
 
 
@@ -26,7 +26,7 @@ function BoardDetailView(props) {
          });
        }, [boardID]);
 
-    console.log(job);
+    console.log("job =>", job);
 
     
     return (
